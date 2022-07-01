@@ -7,11 +7,12 @@
     tools:context=".activities.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/backgroundMainActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="@drawable/blue_background"
+        android:contentDescription="@string/background_main"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,12 +22,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/carLogoMainActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
-        app:layout_constraintBottom_toTopOf="@id/text_ingrese"
+        android:contentDescription="@string/car_logo"
+        app:layout_constraintBottom_toTopOf="@id/textIngrese"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,72 +36,72 @@
         app:srcCompat="@drawable/car_logo_main" />
 
     <Button
-        android:id="@+id/fetch_by_repair_button"
+        android:id="@+id/fetchByRepairButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buscar_por_cod_reparaci_n"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/fetch_by_client_repair_button"
+        app:layout_constraintBottom_toTopOf="@+id/fetchByClientRepairButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_elegi" />
+        app:layout_constraintTop_toBottomOf="@+id/textElegi" />
 
     <Button
-        android:id="@+id/fetch_by_client_repair_button"
+        android:id="@+id/fetchByClientRepairButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buscar_por_cod_cliente_y_cod_reparaci_n"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/exit_button"
+        app:layout_constraintBottom_toTopOf="@+id/exitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fetch_by_repair_button" />
+        app:layout_constraintTop_toBottomOf="@+id/fetchByRepairButton" />
 
     <Button
-        android:id="@+id/exit_button"
+        android:id="@+id/exitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:text="@string/salir"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fetch_by_client_repair_button" />
+        app:layout_constraintTop_toBottomOf="@+id/fetchByClientRepairButton"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/text_ingrese"
+        android:id="@+id/textIngrese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Ingresar"
+        android:text="@string/ingresar"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/text_elegi"
+        app:layout_constraintBottom_toTopOf="@+id/textElegi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/carLogoMainActivity" />
 
     <TextView
-        android:id="@+id/text_elegi"
+        android:id="@+id/textElegi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="Elegí el método de busqueda para la reparación"
+        android:text="@string/eleg_el_m_todo_de_busqueda_para_la_reparaci_n"
         android:textSize="20sp"
-
-        app:layout_constraintBottom_toTopOf="@+id/text_elegi"
+        app:layout_constraintBottom_toTopOf="@+id/textElegi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_ingrese"
+        app:layout_constraintTop_toBottomOf="@+id/textIngrese"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="NotSibling" />
 

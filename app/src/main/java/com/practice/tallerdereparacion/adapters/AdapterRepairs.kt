@@ -2,8 +2,6 @@ package com.practice.tallerdereparacion.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.practice.tallerdereparacion.R
@@ -20,16 +18,6 @@ class AdapterRepairs(private var list: MutableList<Repair>, private val selectRe
         return ViewHolder(itemLayoutView)
     }
 
-    fun setFiltered(filtered: MutableList<Repair>){
-        this.listRepairs = filtered
-        notifyDataSetChanged()
-    }
-
-    fun setDefaultData(){
-        this.listRepairs = list
-        notifyDataSetChanged()
-    }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val repair = listRepairs[position]
 
@@ -44,9 +32,18 @@ class AdapterRepairs(private var list: MutableList<Repair>, private val selectRe
         }
     }
 
-
     override fun getItemCount(): Int {
         return listRepairs.size
+    }
+
+    fun setFiltered(filtered: MutableList<Repair>){
+        this.listRepairs = filtered
+        notifyDataSetChanged()
+    }
+
+    fun setDefaultData(){
+        this.listRepairs = list
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -56,18 +53,11 @@ class AdapterRepairs(private var list: MutableList<Repair>, private val selectRe
         var sparePartsUsed: TextView
         var hoursWorked: TextView
         init{
-            repairId = itemView.findViewById(R.id.repair_id_item)
-            clientCode = itemView.findViewById(R.id.client_code_item)
-            completionDate = itemView.findViewById(R.id.completion_date_item)
-            sparePartsUsed = itemView.findViewById(R.id.spareparts_used_item)
-            hoursWorked = itemView.findViewById(R.id.hours_worked_item)
-
-            /*
-            itemView.setOnClickListener {
-                onItemClick?.invoke(listRepairs[adapterPosition])
-            }
-
-             */
+            repairId = itemView.findViewById(R.id.repairIdItem)
+            clientCode = itemView.findViewById(R.id.clientCodeItem)
+            completionDate = itemView.findViewById(R.id.completionDateItem)
+            sparePartsUsed = itemView.findViewById(R.id.sparepartsUsedItem)
+            hoursWorked = itemView.findViewById(R.id.hoursWorkedItem)
 
         }
     }

@@ -42,7 +42,6 @@ class SearchRepairActivity : AppCompatActivity() {
         buildRecyclerView()
     }
 
-
     //Configuración del recycler y setteo de listeners para cada elemento
     @RequiresApi(Build.VERSION_CODES.O)
     fun buildRecyclerView(){
@@ -63,7 +62,6 @@ class SearchRepairActivity : AppCompatActivity() {
         recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         adapterRepairs= AdapterRepairs(repairs,selectRepairClickListener)
         recycler.adapter = adapterRepairs
-
     }
 
     //Filtra la lista de reparaciones según el código de reparación

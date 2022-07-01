@@ -22,4 +22,10 @@
     <string name="codigo_de_reparacion">Codigo de reparacion</string>
     <string name="repair_image">Repair Image</string>
     <string name="textview">TextView</string>
+    <string name="eleg_el_m_todo_de_busqueda_para_la_reparaci_n">Elegí el método de busqueda para la reparación</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="car_logo">car logo</string>
+    <string name="background_main">background main</string>
+    <string name="codigo_de_reparacion_text">Codigo de reparacion</string>
+    <string name="codigo_de_cliente_text">Codigo de cliente</string>
 </resources>

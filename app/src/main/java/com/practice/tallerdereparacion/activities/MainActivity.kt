@@ -8,13 +8,14 @@ import com.practice.tallerdereparacion.R
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fetchByRepairButton = findViewById<Button>(R.id.fetch_by_repair_button)
-        val fetchByClientRepairButton = findViewById<Button>(R.id.fetch_by_client_repair_button)
-        val exitButton = findViewById<Button>(R.id.exit_button)
+        val fetchByRepairButton = findViewById<Button>(R.id.fetchByRepairButton)
+        val fetchByClientRepairButton = findViewById<Button>(R.id.fetchByClientRepairButton)
+        val exitButton = findViewById<Button>(R.id.exitButton)
 
         fetchByRepairButton.setOnClickListener { fetchByRepairCode() }
         fetchByClientRepairButton.setOnClickListener{ fetchByRepairCodeClientCode()}
